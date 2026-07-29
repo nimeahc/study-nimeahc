@@ -3,17 +3,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 // 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
-char* solution(const char* my_string, int n) {
+int solution(const char* my_string) {
     int len = strlen(my_string);
-    char* answer = (char*)malloc(sizeof(char) * (len*n+1));
+    int answer = 0;
     
-    for (int i = 0; i < len; i++) {
-        for (int j = 0; j < n; j++) {
-            answer[i*n+j] = my_string[i];
+    for (int i = 0; i < len; i++) 
+    { // 숫자 범위 찾고, 문자를 숫자로 바꾸는 법 : '0'으로 빼자. 
+        if (my_string[i] >= '0' && my_string[i] <='9') { 
+            answer += my_string[i] - '0';
         }
     }
-    answer[len*n] = '\0';
     return answer;
 }
