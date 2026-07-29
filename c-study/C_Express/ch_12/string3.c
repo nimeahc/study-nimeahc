@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) 
+{
+    char src[] = "Action speaks louder than words";
+
+    char dst[100];
+    int i;
+
+    printf("원본 문자열=%s\n", src);
+    for (i=0; src[i] != '\0'; i++) {
+        dst[i] = src[i];
+    }
+
+    dst[i] = '\0';//마지막에 NULL문자 넣어줘야됨
+
+    printf("복사된 문자열 = %s\n", dst); 
+    return 0; 
+}

@@ -1,0 +1,36 @@
+#조건문
+
+if (조건식)
+    printf (조건식이 참인 경우에 실행됨) ;
+
+example
+
+if (temperature < 0)
+    printf("현재 영하입니다");
+
+두 개의 문장을 출력할 거라면 
+  if (score >= 90) {
+        printf("합격입니다!\n");
+        printf("축하합니다.\n");
+    }
+이렇게 중괄호를 묶자. 
+
+#switch 문
+- 변수 하나의 값에 따라서 분류 가능
+- 정수값이어야 하는 단점이 있음
+- 정수값이면 식이 간단해지는 장점이 있음
+- break문이 필수임 
+- default문 : 조건이 없을 경우 실행되는 문장 
+
+switch (day) {
+    case 1:
+        printf("월요일\n");
+        // break; 빠뜨림!
+    case 2:
+        printf("화요일\n");
+        break;
+    case 3:
+        printf("수요일\n");
+        break; //break 문 필수임. 
+}
+    

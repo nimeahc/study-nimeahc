@@ -1,0 +1,41 @@
+[c언어 정리]
+
+%d 정수
+%f 실수
+%lf 실수 double 형 (파이썬에서 float : float보다 비트가 더 큼) 
+%c 문자 하나 : 작은 따옴표 
+%s 문자열 : 큰 따옴표 
+
+#include <stdio.h>
+
+int main(void) {
+     printf("%d \n", 3);
+     return 0;
+}
+
+scanf("%형식지정자", &변수명) ;
+
+printf("첫번째숫자를 입력하시오 : \n");
+scanf("%d", &x);
+
+문자열 선언 
+큰 따옴표로 선언
+char 문자열이름
+n+1개의 방이 필요
+char name[] = "abc" ; 로 대괄호 안을 비우면 알아서 칸을 만듦 
+char name[20] = "abc"; n개짜리칸에 '' 문자 한 개씩 (
+
+정수끼리 계산하면 정수로 나옴 (소숫점 0) 
+실수가 하나 끼어 있어야 소숫점 반영됨
+
+###########################
+
+sizeof 연산자 = 자료형 사이즈 알 수 있음 
+
+1바이트 = 4비트 
+정수형 : short, int, long, long long (2 > 4 > 4 > 8) 
+부동소수점형 : float, double, long double (4 > 8 > 16) 
+
+기호 상수 선언
+#define 기호상수이름 값 
+#const 자료형 기호상수 이름 = 값; 

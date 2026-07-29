@@ -1,0 +1,35 @@
+구조체 = 다른 타입을 여러개로 묶어서 가능 
+> 객체지향 프로그래밍 : 클래스 
+
+struct Student {
+    char name[20];
+    int age;
+    double gpa;
+    char address[100];
+}; // 마지막에 세미클론 있어야 함 
+
+>> 키워드 (구조체 이름) {구조체 멤버} ; (세미클론 필수 )
+
+구조체 변수 만들기 
+struct Student kim;
+
+. (점 연산자) 로 멤버 접근
+kim.age = 20;
+kim.gpa = 3.8;
+strcpy(kim.name, "김철수");     // 문자열은 strcpy로!
+printf("%s (%d세)\n", kim.name, kim.age);
+
+포인터 접근: -> (화살표 연산자)
+struct Student kim = {"김철수", 20, 3.8};
+struct Student *p = &kim;
+
+별칭 만들기
+typedef struct {
+    char name[20];
+    int age;
+    double gpa;
+} Student;     // 별칭: Student
+
+// 이제 struct 없이 사용 가능!
+Student kim = {"김철수", 20, 3.8};
+Student students[100];
